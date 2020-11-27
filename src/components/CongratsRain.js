@@ -1,22 +1,13 @@
 import React, { createElement, useState, useEffect } from "react";
 
 function createRainElement(rainElements, setRainElements) {
-    const emojiArray = [
-        "👏",
-        "❤",
-        "😊",
-        "✌",
-        "🎉",
-        "🎊",
-        "✨",
-        "🎈",
-    ];
+    const emojiArray = ["👏", "❤", "😊", "✌", "🎉", "🎊", "✨", "🎈"];
     const rainElement = (
         <div
             className="rainElement"
             style={{
                 left: `${Math.floor(Math.random() * 97)}vw`,
-                animationDuration: `${Math.floor(Math.random() * 5) + 3}s`,
+                animationDuration: `${Math.floor(Math.random() * 5) + 2}s`,
             }}
         >
             {emojiArray[Math.floor(Math.random() * emojiArray.length)]}
