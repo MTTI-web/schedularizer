@@ -3,12 +3,6 @@
       rel="stylesheet">
 <font face="Nunito">
 
-<style>
-    * {
-        user-select: none;
-    }
-</style>
-
 # <font size="7">Schdularizer</font> <font size="4">3.1.7 *[Advanced Series]*</font>
 <font size="4">A place to note all your notes and schedularize your day!</font>
 <br>
