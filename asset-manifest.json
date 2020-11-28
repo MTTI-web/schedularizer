@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/schedularizer/static/css/main.12f3830e.chunk.css",
+    "main.css": "/schedularizer/static/css/main.d7ea668c.chunk.css",
     "main.js": "/schedularizer/static/js/main.8d300cfd.chunk.js",
     "main.js.map": "/schedularizer/static/js/main.8d300cfd.chunk.js.map",
     "runtime-main.js": "/schedularizer/static/js/runtime-main.a16515dd.js",
@@ -10,14 +10,14 @@
     "static/js/3.29b6a29a.chunk.js": "/schedularizer/static/js/3.29b6a29a.chunk.js",
     "static/js/3.29b6a29a.chunk.js.map": "/schedularizer/static/js/3.29b6a29a.chunk.js.map",
     "index.html": "/schedularizer/index.html",
-    "static/css/main.12f3830e.chunk.css.map": "/schedularizer/static/css/main.12f3830e.chunk.css.map",
+    "static/css/main.d7ea668c.chunk.css.map": "/schedularizer/static/css/main.d7ea668c.chunk.css.map",
     "static/js/2.3e831b81.chunk.js.LICENSE.txt": "/schedularizer/static/js/2.3e831b81.chunk.js.LICENSE.txt",
     "static/media/tasksImage.e7f99c72.svg": "/schedularizer/static/media/tasksImage.e7f99c72.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.a16515dd.js",
     "static/js/2.3e831b81.chunk.js",
-    "static/css/main.12f3830e.chunk.css",
+    "static/css/main.d7ea668c.chunk.css",
     "static/js/main.8d300cfd.chunk.js"
   ]
 }
