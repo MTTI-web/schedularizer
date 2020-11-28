@@ -8,6 +8,7 @@ class Header extends Component {
                 <div className="appName">Schedularizer</div>
                 <nav>
                     <Link to="/schedularizer">Home</Link>
+                    <Link to="/schedularizer/about">About</Link>
                 </nav>
                 <div className="linkOpenMenuBar">
                     <div className="linkOpenMenuBarLine"></div>

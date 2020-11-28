@@ -7,6 +7,7 @@ import TaskLists from "./TaskLists.js";
 import Modal from "./Modal.js";
 import CustomizeModalContent from "./CustomizeModalContent.js";
 import CongratsRain from "./CongratsRain.js";
+import AboutUsSection from "./AboutUsSection";
 
 const getItemFromLocalStorage = (item) => {
     const themeFromLocalStorage = localStorage.getItem(item);
@@ -102,6 +103,10 @@ function App() {
                             </>
                         )}
                         exact
+                    />
+                    <Route
+                        path="/schedularizer/about"
+                        component={AboutUsSection}
                     />
                 </Switch>
             </Router>
