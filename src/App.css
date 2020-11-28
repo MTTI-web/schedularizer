@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     font-family: "Nunito";
+    user-select: none;
 }
 
 body {
@@ -344,6 +345,7 @@ nav a {
     top: -50px;
     animation: rain 3s linear;
     font-size: 120%;
+    transition: opacity 0.3s;
 }
 
 .toDoListAppContainer {
@@ -623,8 +625,11 @@ button {
 }
 
 @keyframes rain {
+    94% {
+        opacity: 100%;
+    }
     to {
         transform: translateY(calc(100vh));
-        display: none;
+        opacity: 0;
     }
 }
