@@ -12,6 +12,7 @@ function ToDoListAppContainer(props) {
         message: "Hello world!",
         type: "warning",
     });
+    const [isInputFocused, setIsInputFocused] = useState(false);
 
     useEffect(() => {
         document.querySelector(".toDoListAppContainer").focus();
@@ -79,20 +80,6 @@ function ToDoListAppContainer(props) {
                     {alert.message}
                 </div>
             ) : null}
-            <form className="listInputForm" onSubmit={handleTaskSubmit}>
-                <input
-                    type="text"
-                    placeholder="Enter task here..."
-                    name="listInput"
-                    id="listInput"
-                    autoComplete="off"
-                    value={currentTaskValue}
-                    onChange={(e) => setCurrentTaskValue(e.currentTarget.value)}
-                />
-                <button type="submit">
-                    {editingState ? "Edit" : "Create"}
-                </button>
-            </form>
             <ToDoListContainer
                 tasks={props.tasks}
                 setEditingState={setEditingState}
@@ -103,21 +90,60 @@ function ToDoListAppContainer(props) {
                 listURL={listURL}
                 setShowCongratsRain={props.setShowCongratsRain}
             />
-            {props.tasks.filter(({ listSource }) => listSource === listURL)
-                .length > 0 ? (
-                <button
-                    className="clearTasksButton"
-                    type="button"
-                    onClick={() => {
-                        props.setTasks([]);
-                        setEditingState(false);
-                        setCurrentTaskValue("");
-                        showAlert(true, "Tasks cleared", "warning");
-                    }}
-                >
-                    Clear Tasks
-                </button>
-            ) : null}
+            <div
+                className="tasksControlArea"
+                style={{
+                    gridTemplateColumns: `${
+                        props.tasks.filter(
+                            ({ listSource }) => listSource === listURL
+                        ).length > 0
+                            ? "5fr 1.5fr"
+                            : "100%"
+                    }`,
+                }}
+            >
+                <form className="listInputForm" onSubmit={handleTaskSubmit}>
+                    <div className="taskInputArea">
+                        <input
+                            type="text"
+                            placeholder="Enter task here..."
+                            name="listInput"
+                            id="listInput"
+                            autoComplete="off"
+                            value={currentTaskValue}
+                            onChange={(e) =>
+                                setCurrentTaskValue(e.currentTarget.value)
+                            }
+                            onFocus={() => setIsInputFocused(true)}
+                            onBlur={() => setIsInputFocused(false)}
+                        />
+                        <div
+                            className="inputFocusUnderline"
+                            style={{
+                                width: `${isInputFocused ? "100%" : "0"}`,
+                            }}
+                        ></div>
+                    </div>
+                    <button type="submit">
+                        {editingState ? "Edit" : "Create"}
+                    </button>
+                </form>
+                {props.tasks.filter(({ listSource }) => listSource === listURL)
+                    .length > 0 ? (
+                    <button
+                        className="clearTasksButton"
+                        type="button"
+                        onClick={() => {
+                            props.setTasks([]);
+                            setEditingState(false);
+                            setCurrentTaskValue("");
+                            showAlert(true, "Tasks cleared", "warning");
+                        }}
+                    >
+                        Clear Tasks
+                    </button>
+                ) : null}
+            </div>
         </div>
     );
 }

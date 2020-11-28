@@ -124,9 +124,7 @@ function ToDoListContainer({
             ))}
         </div>
     ) : (
-        <div className="noTasksMessage">
-            <img src={tasksImage} alt="Tasks" />
-        </div>
+        <div className="noTasksMessage">No Tasks Yet</div>
     );
 }
 
