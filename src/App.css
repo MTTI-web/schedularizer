@@ -625,10 +625,10 @@ button {
 }
 
 @keyframes rain {
-    94% {
+    97% {
         opacity: 100%;
     }
-    to {
+    100% {
         transform: translateY(calc(100vh));
         opacity: 0;
     }
