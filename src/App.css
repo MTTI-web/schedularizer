@@ -44,6 +44,24 @@ body {
     color: #414141;
 }
 
+.App.yellow .listInputForm button {
+    border-color: #282828;
+    color: #282828;
+}
+
+.App.yellow .listInputForm input::placeholder {
+    color: #282828;
+}
+
+.App.yellow .inputFocusUnderline {
+    background-color: #282828;
+}
+
+.App.yellow .clearTasksButton {
+    border-color: #282828;
+    color: #282828;
+}
+
 .App.green {
     --light-color-1: #00ff00;
     --light-color-2: #00d100;
