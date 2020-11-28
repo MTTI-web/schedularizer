@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+<link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet">
+<font face="Nunito">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<style>
+    * {
+        user-select: none;
+    }
+</style>
 
-## Available Scripts
+# <font size="7">Schdularizer</font> <font size="4">3.1.7 *[Advanced Series]*</font>
+<font size="4">A place to note all your notes and schedularize your day!</font>
+<br>
+<img src="./public/logo.png" style="height: 100px;" draggable="false"><br>
+<font size="4" style="font-size: 24px;">
+**[Start using it now!](https://mtti-web.github.io/schedularizer/)**
+</font>
+<br><br>
+<font size="4">
+The Schedularizer is constantly getting better and better with updates.
+It's verisions are basically divided into three Series or Stages:
+</font>
+<font size="4">
 
-In the project directory, you can run:
+- **Primitive Series**: 1.0.0 - 2.0.0
+- **Advanced Series**: 2.0.0 - 4.0.0 [Current Series]
+- **Pro Series**: 4.0.0 - Infitnity
 
-### `npm start`
+</font>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<font size="4">
+There are many features in this Web Application, that get added and enhanced by updates. Some features are listed below.
+</font>
+<font size="4">
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. **Multiple Task Lists**: You can make multiple lists to organise your tasks.
+2. **Create Tasks**: Each task list has a place where you can create tasks.
+3. **Edit Tasks**: You can also edit the created tasks by hovering on a task and clicking the edit option.
+4. **Delete Tasks**: You can delete the created tasks by hovering on a task and clicking the edit option.
+5. **Complete Tasks**: You have the option to complete tasks when you're done with them.
+6. **Emoji Rain**: You will see an "emoji rain" on the screen whenever you complete a task to comgratulate you.
+7. **Customise**: You can customize your Schedularizer by clicking on the Customise button.
+    - You can change the theme colour of the page. The colours available are: red, green, yellow and purple.
+    - You can decide whether you want the new tasks to be added on top of the list or below it.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+</font>
+</font>
