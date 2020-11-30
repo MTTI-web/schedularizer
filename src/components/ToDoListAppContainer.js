@@ -89,6 +89,7 @@ function ToDoListAppContainer(props) {
                 showAlert={showAlert}
                 listURL={listURL}
                 setShowCongratsRain={props.setShowCongratsRain}
+                theme={props.theme}
             />
             <div
                 className="tasksControlArea"

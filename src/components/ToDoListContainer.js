@@ -10,6 +10,7 @@ function ToDoListContainer({
     showAlert,
     listURL,
     setShowCongratsRain,
+    theme,
 }) {
     let filteredTasks = [];
     if (listURL !== "My_Day") {
@@ -38,8 +39,12 @@ function ToDoListContainer({
                         e.currentTarget.style.color = "#000";
                         e.currentTarget
                             .querySelectorAll("button")
-                            .forEach((button) => (button.style.color = "#000"));
-                        e.currentTarget.style.borderColor = "#000";
+                            .forEach((button) => {
+                                button.style.color =
+                                    theme !== "dark-pro" ? "#000" : "#adff2f";
+                            });
+                        e.currentTarget.style.borderColor =
+                            theme !== "dark-pro" ? "#000" : "#adff2f";
                     }}
                     onDragOver={(e) => {
                         e.preventDefault();

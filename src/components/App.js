@@ -99,6 +99,7 @@ function App() {
                                     tasks={tasks}
                                     setTasks={setTasks}
                                     setShowCongratsRain={setShowCongratsRain}
+                                    theme={theme}
                                 />
                             </>
                         )}

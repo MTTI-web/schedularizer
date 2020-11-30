@@ -15,17 +15,67 @@ function CustomizeModalContent({
                     Theme Colour
                 </div>
                 <div className="themeColorCustomiseColors">
-                    {themeColors.map(({ lightHex, darkHex, name }) => (
-                        <div
-                            className="customizeColorName"
-                            style={{ backgroundColor: name }}
-                            onClick={(e) => {
-                                setTheme(e.currentTarget.textContent);
-                            }}
-                        >
-                            {name}
-                        </div>
-                    ))}
+                    <div className="proColorsLabel">Pro Colors</div>
+                    <div className="proColorsCustomize">
+                        {themeColors.proColors.map(({ name }, index) => (
+                            <div
+                                className="customizeColorName"
+                                style={{
+                                    backgroundColor: `${
+                                        name === "dark-pro"
+                                            ? "#282828"
+                                            : "#fefefe"
+                                    }`,
+                                    color:
+                                        name === "dark-pro"
+                                            ? "#fff"
+                                            : "#282828",
+                                }}
+                                onClick={(e) => {
+                                    if (name === "dark-pro") {
+                                        document
+                                            .querySelectorAll(
+                                                ".customizeColorName"
+                                            )
+                                            .forEach(
+                                                (colorContainer) =>
+                                                    (colorContainer.style.fontWeight =
+                                                        "500")
+                                            );
+                                        e.currentTarget.style.fontWeight =
+                                            "700";
+                                        setTheme(name);
+                                    }
+                                }}
+                                key={index}
+                            >
+                                {name.replace("-", " ")}
+                            </div>
+                        ))}
+                    </div>
+                    <div className="primaryColorsLabel">Primary Colors</div>
+                    <div className="primaryColorsCustomize">
+                        {themeColors.primaryColors.map(({ name }, index) => (
+                            <div
+                                className="customizeColorName"
+                                style={{ backgroundColor: name }}
+                                onClick={(e) => {
+                                    document
+                                        .querySelectorAll(".customizeColorName")
+                                        .forEach(
+                                            (colorContainer) =>
+                                                (colorContainer.style.fontWeight =
+                                                    "500")
+                                        );
+                                    e.currentTarget.style.fontWeight = "700";
+                                    setTheme(e.currentTarget.textContent);
+                                }}
+                                key={index}
+                            >
+                                {name}
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
             <div className="setNewTaskLocation">

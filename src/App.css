@@ -96,6 +96,116 @@ body {
     --modal-outer-cover-color: rgba(155, 0, 155, 0.507);
 }
 
+/* Pro Themes */
+
+.App.dark-pro {
+    --light-color-1: #070531;
+    --theme-color: #adff2f;
+    --secondary-color: #0c075e;
+    background-image: linear-gradient(
+        to bottom right,
+        var(--light-color-1),
+        #03021d
+    );
+}
+
+.App.dark-pro .modal {
+    background-color: var(--secondary-color);
+}
+
+.App.dark-pro .proColorsLabel,
+.App.dark-pro .primaryColorsLabel {
+    color: #fff;
+}
+
+.App.dark-pro .customizeLabel {
+    color: var(--theme-color);
+}
+
+.App.dark-pro .newTaskLocationSelectOption {
+    background-color: var(--secondary-color);
+    color: var(--theme-color);
+}
+
+.App.dark-pro .clearTasksButton {
+    border-color: var(--theme-color);
+    color: var(--theme-color);
+}
+
+.App.dark-pro header {
+    border-bottom: 2px solid var(--theme-color);
+}
+
+.App.dark-pro .appName {
+    color: var(--theme-color);
+}
+
+.App.dark-pro .createTaskListButton,
+.App.dark-pro .customizeDialogueBoxOpenButton {
+    color: var(--theme-color);
+    background-color: var(--secondary-color);
+}
+
+.App.dark-pro .taskListNameInTasksList {
+    border-bottom-color: var(--theme-color);
+    color: var(--theme-color);
+}
+
+.App.dark-pro .listInputForm input {
+    color: var(--theme-color);
+}
+
+.App.dark-pro .listInputForm input::placeholder {
+    color: var(--theme-color);
+}
+
+.App.dark-pro .listInputForm button {
+    color: var(--theme-color);
+    border-color: var(--theme-color);
+}
+
+.App.dark-pro .taskContainer {
+    border-color: var(--theme-color);
+}
+
+.App.dark-pro .taskContainer button {
+    color: var(--theme-color);
+}
+
+.App.dark-pro .taskContent {
+    color: var(--theme-color);
+}
+
+.App.dark-pro .inputFocusUnderline {
+    background-color: var(--theme-color);
+}
+
+.App.dark-pro .toDoListAppContainer {
+    background-color: var(--secondary-color);
+}
+
+.App.dark-pro .noTasksMessage {
+    color: var(--theme-color);
+}
+
+.App.dark-pro nav a {
+    background-color: transparent;
+    border: 2px solid var(--theme-color);
+    color: var(--theme-color);
+}
+
+.App.dark-pro .taskListOpenLink:link,
+.App.dark-pro .taskListOpenLink:visited {
+    background-color: var(--secondary-color);
+    border: 2px solid var(--theme-color);
+}
+
+.App.dark-pro .taskListName {
+    color: var(--theme-color);
+}
+
+/* ---------- */
+
 .modalOuterCover {
     position: absolute;
     z-index: 20;
@@ -142,17 +252,48 @@ body {
     cursor: pointer;
 }
 
+.themeColorCustomize,
+.setNewTaskLocation {
+    background-color: #cccccc69;
+    padding-top: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 105%;
+    font-weight: 700;
+}
+
 .customizeLabel {
-    color: #fff;
+    color: #282828;
 }
 
 .themeColorCustomiseColors {
     width: 100%;
+    border-radius: 10px;
+    padding-top: 10px;
+}
+
+.proColorsLabel,
+.primaryColorsLabel {
+    color: #282828;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    word-spacing: 2px;
+    font-size: 80%;
+}
+
+.proColorsCustomize {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+    padding: 10px;
+}
+
+.primaryColorsCustomize {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 15px;
     padding: 10px;
-    background-color: #cccccc69;
     border-radius: 10px;
 }
 
@@ -165,6 +306,7 @@ body {
     cursor: pointer;
     transition: transform 0.1s;
     text-transform: capitalize;
+    font-weight: 500;
 }
 
 .customizeColorName:hover,
@@ -182,7 +324,6 @@ body {
     width: 100%;
     grid-gap: 15px;
     padding: 15px;
-    background-color: #cccccc69;
     border-radius: 10px;
 }
 
@@ -621,7 +762,7 @@ button {
 /* Media Queries */
 
 @media screen and (max-width: 820px) {
-    .themeColorCustomiseColors {
+    .primaryColorsCustomize {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -674,7 +815,7 @@ button {
     .modal {
         width: 90%;
     }
-    .themeColorCustomiseColors {
+    .primaryColorsCustomize {
         grid-template-columns: 1fr;
     }
 }

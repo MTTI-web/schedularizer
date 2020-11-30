@@ -1,24 +1,11 @@
-const themeColors = [
-    {
-        lightHex: "#fff",
-        darkHex: "#ccc",
-        name: "yellow",
-    },
-    {
-        lightHex: "#fff",
-        darkHex: "#ccc",
-        name: "green",
-    },
-    {
-        lightHex: "#fff",
-        darkHex: "#ccc",
-        name: "red",
-    },
-    {
-        lightHex: "#fff",
-        darkHex: "#ccc",
-        name: "purple",
-    },
-];
+const themeColors = {
+    primaryColors: [
+        { name: "yellow" },
+        { name: "green" },
+        { name: "red" },
+        { name: "purple" },
+    ],
+    proColors: [{ name: "dark-pro" }],
+};
 
 export default themeColors;
