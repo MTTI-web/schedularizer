@@ -15,12 +15,12 @@ function ToDoListContainer({
     let filteredTasks = [];
     if (listURL !== "My_Day") {
         filteredTasks = tasks.filter(
-            ({ listSource }) => listSource === listURL
+            ({ listSource, completed }) => listSource === listURL && !completed
         );
     } else {
-        filteredTasks = tasks;
+        filteredTasks = tasks.filter(({ completed }) => !completed);
     }
-    return tasks.length > 0 ? (
+    return filteredTasks.length > 0 ? (
         <div className="toDoListContainer">
             {filteredTasks.map(({ id, name }) => (
                 <div
@@ -90,7 +90,14 @@ function ToDoListContainer({
                     <button
                         className="completeTaskButton"
                         onClick={() => {
-                            setTasks(tasks.filter((task) => task.id !== id));
+                            setTasks(
+                                tasks.map((task) => {
+                                    if (task.id === id) {
+                                        task.completed = true;
+                                    }
+                                    return task;
+                                })
+                            );
                             setEditingState(false);
                             setCurrentTaskValue("");
                             setShowCongratsRain(true);

@@ -556,6 +556,7 @@ nav a {
 
 .tasksControlArea {
     display: grid;
+    margin-top: 10px;
 }
 
 .toDoListAppContainer {

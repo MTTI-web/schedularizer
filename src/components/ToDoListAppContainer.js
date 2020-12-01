@@ -98,7 +98,8 @@ function ToDoListAppContainer(props) {
                 style={{
                     gridTemplateColumns: `${
                         props.tasks.filter(
-                            ({ listSource }) => listSource === listURL
+                            ({ listSource, completed }) =>
+                                listSource === listURL && !completed
                         ).length > 0
                             ? "5fr 1.5fr"
                             : "100%"
@@ -131,8 +132,10 @@ function ToDoListAppContainer(props) {
                         {editingState ? "Edit" : "Create"}
                     </button>
                 </form>
-                {props.tasks.filter(({ listSource }) => listSource === listURL)
-                    .length > 0 ? (
+                {props.tasks.filter(
+                    ({ listSource, completed }) =>
+                        listSource === listURL && !completed
+                ).length > 0 ? (
                     <button
                         className="clearTasksButton"
                         type="button"
