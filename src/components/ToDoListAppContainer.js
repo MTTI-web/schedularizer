@@ -38,7 +38,9 @@ function ToDoListAppContainer(props) {
                 id: new Date().getTime().toString(),
                 name: taskName,
                 listSource: listURL,
+                completed: false,
             };
+            console.log(newItem);
             if (props.newTaskLocation === "before") {
                 props.setTasks([newItem, ...props.tasks]);
             } else if (props.newTaskLocation === "after") {

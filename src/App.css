@@ -204,6 +204,37 @@ body {
     color: var(--theme-color);
 }
 
+.App.dark-pro .aboutUsSection {
+    background-color: var(--secondary-color);
+}
+
+.App.dark-pro .feature {
+    background-color: #1a1392;
+}
+
+.App.dark-pro .featureHeading {
+    border-bottom-color: var(--theme-color);
+    color: var(--theme-color);
+}
+
+.App.dark-pro .aboutUsSubHeadingText,
+.App.dark-pro .aboutUsHeadingText {
+    color: var(--theme-color);
+}
+
+.App.dark-pro .sectionHeadingUnderline {
+    background-color: var(--theme-color);
+}
+
+.App.dark-pro .aboutUsContentLogoImg {
+    background-image: radial-gradient(var(--theme-color), #1a1392);
+    box-shadow: inset 0 0 100px 100px #1a1392;
+}
+
+.App.dark-pro .aboutUsContent {
+    background-color: #1a1392;
+}
+
 /* ---------- */
 
 .modalOuterCover {
