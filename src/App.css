@@ -235,6 +235,11 @@ body {
     background-color: #1a1392;
 }
 
+.App.dark-pro .tasksSeperatingTabButton {
+    border-bottom-color: var(--theme-color);
+    color: var(--theme-color);
+}
+
 /* ---------- */
 
 .modalOuterCover {
@@ -575,7 +580,6 @@ nav a {
 .taskListNameInTasksList {
     text-align: center;
     font-size: 120%;
-    margin-bottom: 15px;
     border-bottom: 2px solid #282828;
     padding-bottom: 10px;
 }
@@ -1050,4 +1054,20 @@ button {
     .aboutUsContentLogoImg img {
         width: 100%;
     }
+}
+
+.tasksSeperatingTabs {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.tasksSeperatingTabButton {
+    font-size: 100%;
+    background-color: var(--light-color-1);
+    border: none;
+    border-bottom: 2px solid #282828;
+    outline: none;
+    padding: 10px;
+    cursor: pointer;
 }

@@ -136,7 +136,7 @@ function ToDoListContainer({
             ))}
         </div>
     ) : (
-        <div className="noTasksMessage">No Tasks Yet</div>
+        <div className="noTasksMessage">No Tasks</div>
     );
 }
 

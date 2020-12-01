@@ -12,6 +12,7 @@ function ToDoListAppContainer(props) {
         message: "Hello world!",
         type: "warning",
     });
+    const [currentTaskFilterType, setCurrentTaskFilterType] = useState("to_do");
     const [isInputFocused, setIsInputFocused] = useState(false);
 
     useEffect(() => {
@@ -82,8 +83,34 @@ function ToDoListAppContainer(props) {
                     {alert.message}
                 </div>
             ) : null}
+            <div className="tasksSeperatingTabs">
+                <button
+                    className="tasksSeperatingTabButton"
+                    style={{
+                        fontWeight:
+                            currentTaskFilterType === "to_do" ? "700" : "500",
+                    }}
+                    onClick={() => setCurrentTaskFilterType("to_do")}
+                >
+                    To Do
+                </button>
+                <button
+                    className="tasksSeperatingTabButton"
+                    style={{
+                        fontWeight:
+                            currentTaskFilterType !== "to_do" ? "700" : "500",
+                    }}
+                    onClick={() => setCurrentTaskFilterType("completed")}
+                >
+                    Completed
+                </button>
+            </div>
             <ToDoListContainer
-                tasks={props.tasks}
+                tasks={
+                    currentTaskFilterType === "to_do"
+                        ? props.tasks.filter(({ completed }) => !completed)
+                        : props.tasks.filter(({ completed }) => completed)
+                }
                 setEditingState={setEditingState}
                 setEditID={setEditID}
                 setCurrentTaskValue={setCurrentTaskValue}
