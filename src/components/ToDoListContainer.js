@@ -15,10 +15,10 @@ function ToDoListContainer({
     let filteredTasks = [];
     if (listURL !== "My_Day") {
         filteredTasks = tasks.filter(
-            ({ listSource, completed }) => listSource === listURL && !completed
+            ({ listSource, completed }) => listSource === listURL
         );
     } else {
-        filteredTasks = tasks.filter(({ completed }) => !completed);
+        filteredTasks = tasks;
     }
     return filteredTasks.length > 0 ? (
         <div className="toDoListContainer">
