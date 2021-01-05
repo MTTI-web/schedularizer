@@ -1,5 +1,4 @@
 import React from "react";
-import tasksImage from "../tasksImage.svg";
 
 function ToDoListContainer({
     tasks,
@@ -15,7 +14,7 @@ function ToDoListContainer({
     let filteredTasks = [];
     if (listURL !== "My_Day") {
         filteredTasks = tasks.filter(
-            ({ listSource, completed }) => listSource === listURL
+            ({ listSource }) => listSource === listURL
         );
     } else {
         filteredTasks = tasks;

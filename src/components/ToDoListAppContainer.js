@@ -83,7 +83,7 @@ function ToDoListAppContainer(props) {
                     {alert.message}
                 </div>
             ) : null}
-            <div className="tasksSeperatingTabs">
+            {/* <div className="tasksSeperatingTabs">
                 <button
                     className="tasksSeperatingTabButton"
                     style={{
@@ -104,7 +104,7 @@ function ToDoListAppContainer(props) {
                 >
                     Completed
                 </button>
-            </div>
+            </div> */}
             <ToDoListContainer
                 tasks={
                     currentTaskFilterType === "to_do"
